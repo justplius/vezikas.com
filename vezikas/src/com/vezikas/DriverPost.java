@@ -7,7 +7,7 @@ import android.text.format.Time;
 
 public class DriverPost {
 	
-	//pakeitimas
+	//pakeitimass
 	
 	//Post data
 	private float rating;	
