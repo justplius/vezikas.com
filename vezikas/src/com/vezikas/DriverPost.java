@@ -7,6 +7,8 @@ import android.text.format.Time;
 
 public class DriverPost {
 	
+	//pakeitimas
+	
 	//Post data
 	private float rating;	
 	private int seats_available;
