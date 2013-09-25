@@ -7,7 +7,7 @@ import android.text.format.Time;
 
 public class DriverPost {
 	
-	//blasbla
+	//bandymas oficialus
 	
 	//Post data
 	private float rating;	
