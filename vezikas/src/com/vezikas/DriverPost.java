@@ -7,8 +7,7 @@ import android.text.format.Time;
 
 public class DriverPost {
 	
-	//no changes
-	//youyou
+	//blasbla
 	
 	//Post data
 	private float rating;	
