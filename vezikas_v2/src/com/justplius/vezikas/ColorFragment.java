@@ -1,6 +1,6 @@
-package com.jeremyfeinstein.slidingmenu.example.fragments;
+package com.justplius.vezikas;
 
-import com.jeremyfeinstein.slidingmenu.example.R;
+import com.justplius.vezikas.R;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;

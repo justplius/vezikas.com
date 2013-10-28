@@ -1,4 +1,4 @@
-package com.jeremyfeinstein.slidingmenu.example.fragments;
+package com.justplius.vezikas;
 
 import android.app.AlertDialog;
 import android.content.Intent;
@@ -8,9 +8,9 @@ import android.support.v4.app.Fragment;
 import android.view.View;
 
 import com.actionbarsherlock.view.MenuItem;
-import com.jeremyfeinstein.slidingmenu.example.R;
 import com.jeremyfeinstein.slidingmenu.lib.SlidingMenu;
 import com.jeremyfeinstein.slidingmenu.lib.app.SlidingFragmentActivity;
+import com.justplius.vezikas.R;
 
 public class ResponsiveUIActivity extends SlidingFragmentActivity {
 

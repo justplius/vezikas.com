@@ -1,4 +1,4 @@
-package com.jeremyfeinstein.slidingmenu.example.fragments;
+package com.justplius.vezikas;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -9,7 +9,7 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
-import com.jeremyfeinstein.slidingmenu.example.R;
+import com.justplius.vezikas.R;
 
 public class ColorMenuFragment extends ListFragment {
 

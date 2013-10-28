@@ -1,11 +1,10 @@
-package com.jeremyfeinstein.slidingmenu.example.fragments;
+package com.justplius.vezikas;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 
-import com.jeremyfeinstein.slidingmenu.example.BaseActivity;
-import com.jeremyfeinstein.slidingmenu.example.R;
 import com.jeremyfeinstein.slidingmenu.lib.SlidingMenu;
+import com.justplius.vezikas.R;
 
 public class FragmentChangeActivity extends BaseActivity {
 	

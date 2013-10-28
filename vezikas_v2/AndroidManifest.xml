@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.jeremyfeinstein.slidingmenu.example"
+    package="com.justplius.vezikas"
     android:versionCode="3"
     android:versionName="1.2" >
 
@@ -16,7 +16,7 @@
         android:theme="@style/ExampleTheme"
         android:uiOptions="splitActionBarWhenNarrow" >
         <activity
-            android:name=".fragments.FragmentChangeActivity"
+            android:name="com.justplius.vezikas.FragmentChangeActivity"
             android:configChanges="orientation|screenSize|screenLayout"
             android:theme="@style/Theme.Sherlock.Light.DarkActionBar">
             <intent-filter>

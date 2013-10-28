@@ -57,11 +57,11 @@
 # view res/layout/abs__action_bar_tab.xml #generated:3
 -keep class com.actionbarsherlock.internal.widget.ScrollingTabContainerView$TabView { <init>(...); }
 
-# view AndroidManifest.xml #generated:18
--keep class com.jeremyfeinstein.slidingmenu.example.fragments.FragmentChangeActivity { <init>(...); }
-
 # view res/layout/slidingmenumain.xml #generated:2
 -keep class com.jeremyfeinstein.slidingmenu.lib.SlidingMenu { <init>(...); }
+
+# view AndroidManifest.xml #generated:18
+-keep class com.justplius.vezikas.FragmentChangeActivity { <init>(...); }
 
 # onClick res/layout/actionbar.xml #generated:8
 -keepclassmembers class * { *** home(...); }
