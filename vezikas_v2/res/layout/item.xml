@@ -16,8 +16,9 @@
 	                android:layout_width="35dp"
 	                android:layout_height="35dp"
 	                android:layout_alignParentLeft="true"
+	                android:alpha=".45"
 	                android:paddingLeft="10dp"
-	                android:src="@drawable/ico_buldogas" />
+	                android:src="@drawable/bag_icon" />
 	            
 	            <TextView
 	                android:id="@+id/txtRoute"
@@ -28,10 +29,11 @@
 	                android:layout_alignParentTop="true"
 	                android:layout_centerVertical="true"
 	                android:layout_toRightOf="@+id/imgIcon"
+	                android:alpha=".75"
 	                android:gravity="center"
 	                android:paddingLeft="5dp"
 	                android:paddingRight="5dp"
-	                android:paddingTop="1dp"
+	                android:paddingTop="5dp"
 	                android:text="Šiauliai->Kaunas->Vilnius"
 	                android:textAppearance="?android:attr/textAppearanceMedium" />
 	
@@ -84,13 +86,13 @@
 		                   		                   
 		                   <ImageView
 		                       android:id="@+id/imgSeat"
-		                       android:layout_width="30dp"
-		                       android:layout_height="30dp"
+		                       android:layout_width="23dp"
+		                       android:layout_height="23dp"
 		                       android:layout_above="@+id/textName"
 		                       android:layout_alignLeft="@+id/textDate"
 		                       android:layout_below="@+id/textDate"
 		                       android:paddingLeft="5dp"
-		                       android:src="@drawable/ico_buldogas" />
+		                       android:src="@drawable/person_icon1" />
 
 				            <TextView
 				                android:id="@+id/textName"
@@ -105,12 +107,12 @@
 
 				            <ImageView
 				                android:id="@+id/imgArrow"
-				                android:layout_width="30dp"
-				                android:layout_height="30dp"
+				                android:layout_width="25dp"
+				                android:layout_height="25dp"
 				                android:layout_alignParentRight="true"
 				                android:layout_centerVertical="true"
 				                android:paddingRight="5dp"
-				                android:src="@drawable/ico_buldogas" />
+				                android:src="@drawable/arrow" />
 
 				            <RatingBar
 				                android:id="@+id/Rating"
@@ -130,7 +132,7 @@
 				                android:layout_centerVertical="true"
 				                android:layout_toRightOf="@+id/imgSeat"
 				                android:gravity="center"
-				                android:paddingLeft="5dp"
+				                android:paddingLeft="3dp"
 				                android:text="4"
 				                android:textAppearance="?android:attr/textAppearanceSmall" />
 
