@@ -41,7 +41,7 @@ import com.actionbarsherlock.view.MenuInflater;
 
 
 public class BaseActivity extends SlidingFragmentActivity implements OnClickListener {
-//comment added
+//komentaras
 	private int mTitleRes;
 	protected ListFragment mFrag;
 
