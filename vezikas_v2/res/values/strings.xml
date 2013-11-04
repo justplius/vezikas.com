@@ -23,5 +23,17 @@
 	<string name="drivers">Vežėjai</string>
 	<string name="all">Visi</string>
 	<string name="menu_navigation">Filtras: Visi</string>
+	<string name="month_1_ltu">Sausio</string>
+	<string name="month_2_ltu">Vasario</string>
+	<string name="month_3_ltu">Kovo</string>
+	<string name="month_4_ltu">Balandžio</string>
+	<string name="month_5_ltu">Gegužės</string>
+	<string name="month_6_ltu">Birželio</string>
+	<string name="month_7_ltu">Liepos</string>
+	<string name="month_8_ltu">Rugpjūčio</string>
+	<string name="month_9_ltu">Rugsėjo</string>
+	<string name="month_10_ltu">Spalio</string>
+	<string name="month_11_ltu">Lapkričio</string>
+	<string name="month_12_ltu">Gruodžio</string>
     
 </resources>

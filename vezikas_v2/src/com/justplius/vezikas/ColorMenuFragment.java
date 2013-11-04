@@ -10,12 +10,13 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
 import com.justplius.vezikas.R;
+import com.justplius.vezikas.testlistview.PostsFragment;
 
 public class ColorMenuFragment extends ListFragment {
 
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-		return inflater.inflate(R.layout.list, null);
+		return inflater.inflate(R.layout.posts_list, null);
 	}
 
 	@Override
@@ -30,12 +31,13 @@ public class ColorMenuFragment extends ListFragment {
 	@Override
 	public void onListItemClick(ListView lv, View v, int position, long id) {
 		Fragment newContent = null;
+		Bundle args;
 		switch (position) {
 		case 0:
 			newContent = new ColorFragment(R.color.red);
 			break;
 		case 1:
-			newContent = new ColorFragment(R.color.green);
+			newContent = new PostsFragment();
 			break;
 		case 2:
 			newContent = new ColorFragment(R.color.blue);

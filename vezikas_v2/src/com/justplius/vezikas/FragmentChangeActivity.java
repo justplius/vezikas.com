@@ -21,7 +21,7 @@ public class FragmentChangeActivity extends BaseActivity {
 		if (savedInstanceState != null)
 			mContent = getSupportFragmentManager().getFragment(savedInstanceState, "mContent");
 		if (mContent == null)
-			mContent = new ColorFragment(R.color.red);	
+			mContent = new ColorFragment();	
 		
 		// set the Above View
 		setContentView(R.layout.content_frame);

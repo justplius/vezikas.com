@@ -1,7 +1,5 @@
 package com.justplius.vezikas;
 
-import com.justplius.vezikas.R;
-
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -21,7 +19,7 @@ public class ColorFragment extends Fragment {
 		mColorRes = colorRes;
 		setRetainInstance(true);
 	}
-
+//
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 		if (savedInstanceState != null)
