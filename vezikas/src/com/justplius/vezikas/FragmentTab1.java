@@ -1,4 +1,4 @@
-package com.vezikas;
+package com.justplius.vezikas;
  
 import java.util.ArrayList;
 

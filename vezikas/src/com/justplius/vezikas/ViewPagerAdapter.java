@@ -1,5 +1,7 @@
 package com.vezikas;
 
+import com.justplius.vezikas.testlistview.FragmentTab1;
+
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
