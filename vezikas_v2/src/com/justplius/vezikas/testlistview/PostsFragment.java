@@ -49,33 +49,6 @@ public class PostsFragment extends SherlockListFragment  {
     public void onViewCreated(View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         driverPosts = new ArrayList<PostListViewItem>();    
-        
-        driverPost = new PostListViewItem(context);
-        
-        driverPosts.add(driverPost); 
-        /*flloat rating = 4.5f;
-		leavingTime = new Time();
-		leavingTime.getCurrentTimezone();
-		leavingTime.setToNow();
-		droppingTime = new Time();
-		droppingTime.set(leavingTime.toMillis(true) + 1000*60*60*3);
-		route = new String("Ðiauliai - Kaunas - Vilnius");
-		seats_available = 4;				
-		date = new Time();
-		date.set(leavingTime.toMillis(true));
-		thumbnail = R.drawable.ic_launcher;*/
-        
-        /*driverPost.setDate(new Time(Time.getCurrentTimezone()));
-        driverPost.setDroppingTime(_time);
-        driverPost.setLeavingTime(_time);*/
-        driverPost.setRating(4);
-        driverPost.setRouteInformation("Kaunas - Ðiauliai");
-        driverPost.setSeatsAvailable(5);
-        //driverPost.setThumbnailInt(_thumbnail);
-        
-        driverPosts.add(driverPost); 
-        postListAdapter = new PostsListViewAdapter(context, driverPosts);
-        this.setListAdapter(postListAdapter);
     	GetPostsTask getPostsTask = new GetPostsTask();
     	getPostsTask.execute();
     	//this.setList
