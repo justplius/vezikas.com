@@ -25,7 +25,7 @@ public class ServerDbQuerry {
     private String result = "";
     private InputStream is = null;    
      
-    public ServerDbQuerry (ArrayList<NameValuePair> nvp, String url){    	
+public ServerDbQuerry (ArrayList<NameValuePair> nvp, String url){    	
     	
 	    //http post
 	    try{
@@ -55,6 +55,36 @@ public class ServerDbQuerry {
 	    }
 	    
     }
+
+public ServerDbQuerry (String url){    	
+	
+    //http post
+    try{
+    	HttpClient httpclient = new DefaultHttpClient();
+        HttpPost httppost = new HttpPost(url);
+        HttpResponse response = httpclient.execute(httppost);
+        HttpEntity entity = response.getEntity();
+        is = entity.getContent();	
+    } catch(Exception e){
+        Log.e("log_tag", "Error in http connection "+e.toString());
+    }
+    
+    //convert response to string
+    try{
+        BufferedReader reader = new BufferedReader(new InputStreamReader(is,"utf-8"),8);
+        StringBuilder sb1 = new StringBuilder();
+        String line = null;
+        while ((line = reader.readLine()) != null) {
+            sb1.append(line + "\n");
+        }
+        is.close();
+            
+        result=sb1.toString();	        
+    } catch(Exception e){
+        Log.e("log_tag", "Error converting result "+e.toString());
+    }
+    
+}
     
     public String returnJSON (){
     	return result;

@@ -72,6 +72,7 @@ public class PostsListViewAdapter extends ArrayAdapter<PostListViewItem> {
 	            holder.seats_available = (TextView) convertView.findViewById(R.id.seats_available);	            
 	            holder.date_information = (TextView) convertView.findViewById(R.id.date_information);	            
 	            holder.time_information = (TextView) convertView.findViewById(R.id.time_information);
+	            holder.name_surname = (TextView) convertView.findViewById(R.id.name_surname);
 	            holder.rating = (RatingBar) convertView.findViewById(R.id.rating);
 	            break;
 	        }
@@ -84,8 +85,10 @@ public class PostsListViewAdapter extends ArrayAdapter<PostListViewItem> {
 	    holder.seats_available.setText(allPostsListViewItems.get(position).getSeatsAvailable());
 	    holder.date_information.setText(allPostsListViewItems.get(position).getDate());
 	    holder.time_information.setText(allPostsListViewItems.get(position).getTime());
-	    holder.rating.setRating(allPostsListViewItems.get(position).getRating());
-	    holder.time_information.setText(allPostsListViewItems.get(position).getTime());
+	    holder.rating.setRating(allPostsListViewItems.get(position).getRating());;	    
+	    holder.name_surname.setText(allPostsListViewItems.get(position).getNameSurname());	 
+	    
+	    
 	    holder.pos = position;
 	    return convertView;
 	}

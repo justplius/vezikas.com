@@ -88,14 +88,14 @@
 		                       android:id="@+id/imgSeat"
 		                       android:layout_width="23dp"
 		                       android:layout_height="23dp"
-		                       android:layout_above="@+id/NameSurname"
+		                       android:layout_above="@+id/name_surname"
 		                       android:layout_alignLeft="@+id/date_information"
 		                       android:layout_below="@+id/date_information"
 		                       android:paddingLeft="5dp"
 		                       android:src="@drawable/person_icon1" />
 
 				            <TextView
-				                android:id="@+id/NameSurname"
+				                android:id="@+id/name_surname"
 				                android:layout_width="200dp"
 				                android:layout_height="wrap_content"
 				                android:layout_alignParentBottom="true"
@@ -106,7 +106,7 @@
 				                android:textAppearance="?android:attr/textAppearanceSmall" />
 
 				            <ImageView
-				                android:id="@+id/imgArrow"
+				                android:id="@+id/arrow"
 				                android:layout_width="25dp"
 				                android:layout_height="25dp"
 				                android:layout_alignParentRight="true"

@@ -35,5 +35,10 @@
 	<string name="month_10_ltu">Spalio</string>
 	<string name="month_11_ltu">Lapkričio</string>
 	<string name="month_12_ltu">Gruodžio</string>
-    
+    <string name="url_select_from_route">http://vezikas.bugs3.com/json_db_access/selectFromRoute.php</string>
+ 	<string name="url_insert_to_route">http://vezikas.bugs3.com/json_db_access/insertToRoute.php</string>
+ 	<string name="url_select_from_phone">http://vezikas.bugs3.com/json_db_access/selectFromPhone.php</string>
+ 	<string name="url_insert_to_phone">http://vezikas.bugs3.com/json_db_access/insertToPhone.php</string>
+ 	<string name="url_insert_to_driverpost">http://vezikas.bugs3.com/json_db_access/insertToDriverPost.php</string>
+ 	<string name="url_get_posts">http://vezikas.bugs3.com/json_db_access/getPosts.php</string>
 </resources>

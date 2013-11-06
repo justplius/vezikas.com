@@ -1,11 +1,16 @@
 package com.justplius.vezikas.testlistview;
 
+import java.text.ParsePosition;
+import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.Locale;
 
 import com.justplius.vezikas.R;
 
 import android.content.Context;
+import android.net.ParseException;
 import android.text.format.Time;
+import android.util.Log;
 
 
 public class PostListViewItem {
@@ -17,26 +22,20 @@ public class PostListViewItem {
 	private int seats_available;
 	private String route;
 	private Time date;
-	private Time leavingTime;
-	private Time droppingTime;
+	private Time leaving_time_from;
+	private Time leaving_time_to;
 	private int thumbnail;
 	private String nameSurname;
 				
 	//Constructor
 	PostListViewItem (Context _context) {
 		context = _context;
-		rating = 4.5f;
-		leavingTime = new Time();
-		leavingTime.getCurrentTimezone();
-		leavingTime.setToNow();
-		droppingTime = new Time();
-		droppingTime.set(leavingTime.toMillis(true) + 1000*60*60*3);
-		route = new String("Ðiauliai -> Kaunas -> Vilnius");
-		seats_available = 4;				
+		leaving_time_from = new Time();
+		leaving_time_to = new Time();		
 		date = new Time();
-		date.set(leavingTime.toMillis(true));
-		thumbnail = R.drawable.ic_launcher;
-		nameSurname = "Vardenis Pavardenis";
+		route = new String();
+		thumbnail = R.drawable.ic_driver;
+		nameSurname = new String();
 	}
 		
 	public void setRating(float _rating){
@@ -47,16 +46,16 @@ public class PostListViewItem {
 	   	route = _route;
 	}
 				
-	public void setDate(Time _date){
-	   	date = _date;
+	public void setDate(String _date) throws java.text.ParseException{  
+		date.set(new SimpleDateFormat("yyyy-MM-dd").parse(_date).getTime());
 	}
 				
-	public void setLeavingTime(Time _time){
-		leavingTime = _time;
+	public void setLeavingTimeFrom(String _time) throws java.text.ParseException{		
+		leaving_time_from.set(new SimpleDateFormat("HH:mm:ss").parse(_time).getTime());
 	}
 		
-	public void setDroppingTime(Time _time){
-		droppingTime = _time;
+	public void setLeavingTimeTo(String _time) throws java.text.ParseException{
+		leaving_time_to.set(new SimpleDateFormat("HH:mm:ss").parse(_time).getTime());
 	}
 				
 	public void setSeatsAvailable(int _seats_available){
@@ -125,8 +124,16 @@ public class PostListViewItem {
 				
 	public String getTime(){
 		StringBuilder timeString = new StringBuilder();		
-		timeString.append(leavingTime.hour + ":" + leavingTime.minute + " - ");
-		timeString.append(droppingTime.hour + ":" + droppingTime.minute);
+		timeString.append(leaving_time_from.hour + ":");
+		if (leaving_time_from.minute < 10){
+			timeString.append("0"); 
+		}
+		timeString.append(leaving_time_from.minute + " - ");
+		timeString.append(leaving_time_to.hour + ":");
+		if (leaving_time_to.minute < 10){
+			timeString.append("0"); 
+		}
+		timeString.append(leaving_time_to.minute);
 	   	return timeString.toString();
 	}
 				
