@@ -1,6 +1,14 @@
 package com.justplius.vezikas;
 
+import java.util.ArrayList;
+
+import org.apache.http.NameValuePair;
+import org.apache.http.message.BasicNameValuePair;
+
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.ListFragment;
 import android.view.LayoutInflater;
@@ -8,11 +16,25 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.TextView;
+import android.widget.Toast;
 
+import com.facebook.Request;
+import com.facebook.Response;
+import com.facebook.Session;
+import com.facebook.SessionState;
+import com.facebook.model.GraphUser;
+import com.facebook.widget.LoginButton;
+import com.facebook.widget.ProfilePictureView;
 import com.justplius.vezikas.R;
+import com.justplius.vezikas.facebook.FacebookLogin;
 import com.justplius.vezikas.testlistview.PostsFragment;
 
 public class ColorMenuFragment extends ListFragment {
+
+	private ProfilePictureView profilePictureView;
+	private TextView nameSurname;
+	private LoginButton loginButton;
 
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -26,6 +48,26 @@ public class ColorMenuFragment extends ListFragment {
 		ArrayAdapter<String> colorAdapter = new ArrayAdapter<String>(getActivity(), 
 				android.R.layout.simple_list_item_1, android.R.id.text1, colors);
 		setListAdapter(colorAdapter);
+		SharedPreferences p = PreferenceManager.getDefaultSharedPreferences(this.getActivity());
+		String user_id = p.getString("FB_ID", "");
+		profilePictureView = (ProfilePictureView) this.getActivity().findViewById(R.id.profilePicture);
+		profilePictureView.setProfileId(user_id);
+		String name_surname = p.getString("FB_NAME_SURNAME", "");
+		nameSurname = (TextView) this.getActivity().findViewById(R.id.nameSurname);
+		nameSurname.setText(name_surname);
+		loginButton = (LoginButton) this.getActivity().findViewById(R.id.login_button);
+		loginButton.setUserInfoChangedCallback(new LoginButton.UserInfoChangedCallback() {
+            @Override
+            public void onUserInfoFetched(GraphUser user) {                
+                Session session = Session.getActiveSession();
+                if (session.isClosed()) {
+                	session.closeAndClearTokenInformation();
+                	Intent intent = new Intent(getActivity(), FacebookLogin.class);
+                	startActivity(intent);
+                	getActivity().finish();
+                }
+            }
+        });
 	}
 
 	@Override
@@ -34,7 +76,8 @@ public class ColorMenuFragment extends ListFragment {
 		Bundle args;
 		switch (position) {
 		case 0:
-			newContent = new ColorFragment(R.color.red);
+			Intent intent = new Intent(this.getActivity(), FacebookLogin.class);
+	        startActivity(intent);
 			break;
 		case 1:
 			newContent = new PostsFragment();

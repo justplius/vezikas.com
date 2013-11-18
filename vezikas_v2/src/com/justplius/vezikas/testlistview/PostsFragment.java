@@ -10,8 +10,10 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import android.content.Context;
+import android.content.SharedPreferences;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.os.Handler;
 import android.text.format.Time;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -19,6 +21,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ListAdapter;
 import android.widget.ListView;
+import android.widget.RatingBar;
 
 import com.actionbarsherlock.app.SherlockFragment;
 import com.actionbarsherlock.app.SherlockFragmentActivity;
@@ -51,7 +54,6 @@ public class PostsFragment extends SherlockListFragment  {
         driverPosts = new ArrayList<PostListViewItem>();    
     	GetPostsTask getPostsTask = new GetPostsTask();
     	getPostsTask.execute();
-    	//this.setList
     }
  
     @Override
@@ -92,9 +94,7 @@ public class PostsFragment extends SherlockListFragment  {
     	            driverPost = new PostListViewItem(context); 
     	            driverPost.setName(json_data.getString("name_surname"));    	            
     	            driverPost.setRouteInformation(json_data.getString("route"));
-    	            driverPost.setSeatsAvailable(json_data.getInt("seats_available"));
-    	            //driverPost.setThumbnailInt(json_data.getInt("image"));
-    	            
+    	            driverPost.setSeatsAvailable(json_data.getInt("seats_available"));    	            
     	            driverPost.setDate(json_data.getString("leaving_date"));
     	            driverPost.setLeavingTimeFrom(json_data.getString("leaving_time_to"));
     	            driverPost.setLeavingTimeTo(json_data.getString("leaving_time_from"));
@@ -109,7 +109,7 @@ public class PostsFragment extends SherlockListFragment  {
     	        postListAdapter.notifyDataSetChanged();
     	        
     	    }catch(JSONException e){
-    	    	Log.e("log_tag", "selectFromRoute.php or insertToRoute.php error: "+e.toString());
+    	    	Log.e("PostsFragment.java", "get posts async task error: "+e.toString());
     	    } catch (ParseException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();

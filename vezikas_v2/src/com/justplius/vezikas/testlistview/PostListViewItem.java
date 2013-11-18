@@ -28,7 +28,7 @@ public class PostListViewItem {
 	private String nameSurname;
 				
 	//Constructor
-	PostListViewItem (Context _context) {
+	public PostListViewItem (Context _context) {
 		context = _context;
 		leaving_time_from = new Time();
 		leaving_time_to = new Time();		

@@ -36,7 +36,7 @@ public ServerDbQuerry (ArrayList<NameValuePair> nvp, String url){
 	        HttpEntity entity = response.getEntity();
 	        is = entity.getContent();	
 	    } catch(Exception e){
-	        Log.e("log_tag", "Error in http connection "+e.toString());
+	        Log.e("ServerDbQuery.java with nvp", "Error in http connection: "+e.toString());
 	    }
 	    
 	    //convert response to string
@@ -51,7 +51,7 @@ public ServerDbQuerry (ArrayList<NameValuePair> nvp, String url){
 	            
 	        result=sb1.toString();	        
 	    } catch(Exception e){
-	        Log.e("log_tag", "Error converting result "+e.toString());
+	        Log.e("ServerDbQuery.java with nvp", "Error converting result: "+e.toString());
 	    }
 	    
     }
@@ -66,7 +66,7 @@ public ServerDbQuerry (String url){
         HttpEntity entity = response.getEntity();
         is = entity.getContent();	
     } catch(Exception e){
-        Log.e("log_tag", "Error in http connection "+e.toString());
+        Log.e("ServerDbQuery.java", "Error in http connection: "+e.toString());
     }
     
     //convert response to string
@@ -81,7 +81,7 @@ public ServerDbQuerry (String url){
             
         result=sb1.toString();	        
     } catch(Exception e){
-        Log.e("log_tag", "Error converting result "+e.toString());
+        Log.e("ServerDbQuery.java", "Error converting result: "+e.toString());
     }
     
 }
