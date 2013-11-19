@@ -3,6 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="horizontal"
+    android:background="@drawable/header_background"
     >
  
     <ImageButton
@@ -11,7 +12,7 @@
         android:layout_width="60dip"
         android:layout_height="60dip"
         android:layout_gravity="center_vertical"
-        android:src="@drawable/ic_launcher"
+        android:src="@drawable/vezikas_logo"
         android:background="@android:color/transparent"
         android:onClick="home"
          />
@@ -22,8 +23,9 @@
         android:layout_height="match_parent"
         android:layout_weight="1"
         android:gravity="center_vertical"
-        android:text="Pavežikas"
-        android:textColor="#FFFFFF" />
+        android:text="Vežikas"
+        android:textColor="#FFFFFF"
+        style="@style/Header.Text.Big" />
     <ImageButton
         android:id="@+id/refresh"
         android:title="@string/refresh"
@@ -31,7 +33,7 @@
         android:layout_height="60dip"
         android:layout_gravity="center_vertical"
         android:onClick="refresh"
-        android:src="@drawable/ic_launcher" 
+        android:src="@drawable/refresh_icon" 
         android:background="@android:color/transparent"
         />
     <ImageButton
@@ -41,7 +43,7 @@
         android:layout_height="60dip"
         android:layout_gravity="center_vertical"
         android:onClick="main_menu"
-        android:src="@drawable/ic_launcher" 
+        android:src="@drawable/toogle_icon" 
         android:background="@android:color/transparent"
         />
  
