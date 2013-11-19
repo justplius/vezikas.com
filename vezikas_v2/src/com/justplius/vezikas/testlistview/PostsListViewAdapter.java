@@ -3,14 +3,37 @@ package com.justplius.vezikas.testlistview;
 import java.util.ArrayList;
 
 import com.justplius.vezikas.R;
+import com.justplius.vezikas.postdetails.PostDetails;
 
 import android.content.Context;
+<<<<<<< Upstream, based on origin/master
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.graphics.Canvas;
+import android.graphics.Paint;
+import android.graphics.PorterDuffXfermode;
+import android.graphics.Rect;
+import android.graphics.RectF;
+import android.graphics.Bitmap.Config;
+import android.graphics.PorterDuff.Mode;
+import android.graphics.drawable.BitmapDrawable;
+import android.graphics.drawable.Drawable;
+import android.util.Log;
+=======
+import android.content.Intent;
+import android.os.Bundle;
+>>>>>>> 400be6e changes for pulling
 import android.view.LayoutInflater;
 import android.view.View;
+import android.view.View.OnClickListener;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.FrameLayout;
 import android.widget.ImageView;
+import android.widget.ListView;
 import android.widget.RatingBar;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 public class PostsListViewAdapter extends ArrayAdapter<PostListViewItem> {
@@ -59,13 +82,30 @@ public class PostsListViewAdapter extends ArrayAdapter<PostListViewItem> {
 	
 	
 	@Override
-	public View getView(int position, View convertView, ViewGroup parent) {
+	public View getView(final int position, View convertView, ViewGroup parent) {
 	    final ViewHolder holder;
 	    int type = getItemViewType(position);
 	    if (convertView == null) {
 	        holder = new ViewHolder();
 	        switch (type) {
 	        case 1:
+<<<<<<< Upstream, based on origin/master
+	        	 convertView = mInflater.inflate(R.layout.passenger_post_item,parent, false);
+		            
+		            holder.post_item_background = (RelativeLayout) convertView.findViewById(R.id.postItemBackground);
+		            Bitmap b = BitmapFactory.decodeResource(context.getResources(), R.drawable.pattern_green);         
+		            //Drawable d = new BitmapDrawable(context.getResources(),getRoundedCornerBitmap(b)); 
+		            Drawable d = new CurvedAndTiled(b, 15);
+		            holder.post_item_background.setBackgroundDrawable(d);
+		            
+		            holder.route_information = (TextView) convertView.findViewById(R.id.route_information);            
+		            holder.thumbnail = (ImageView) convertView.findViewById(R.id.thumbnail);	            
+		            holder.seats_available = (TextView) convertView.findViewById(R.id.seats_available);	            
+		            holder.date_information = (TextView) convertView.findViewById(R.id.date_information);	            
+		            holder.time_information = (TextView) convertView.findViewById(R.id.time_information);
+		            holder.name_surname = (TextView) convertView.findViewById(R.id.name_surname);
+		            holder.rating = (RatingBar) convertView.findViewById(R.id.rating);
+=======
 	            convertView = mInflater.inflate(R.layout.passenger_post_item,parent, false);
 	            holder.route_information = (TextView) convertView.findViewById(R.id.route_information);            
 	            holder.thumbnail = (ImageView) convertView.findViewById(R.id.thumbnail);	            
@@ -74,6 +114,8 @@ public class PostsListViewAdapter extends ArrayAdapter<PostListViewItem> {
 	            holder.time_information = (TextView) convertView.findViewById(R.id.time_information);
 	            holder.name_surname = (TextView) convertView.findViewById(R.id.name_surname);
 	            holder.rating = (RatingBar) convertView.findViewById(R.id.rating);
+	            //holder.list_view = (ListView) convertView.findViewById(R.id.listView);
+>>>>>>> 400be6e changes for pulling
 	            break;
 	        }
 	        convertView.setTag(holder);
@@ -87,8 +129,16 @@ public class PostsListViewAdapter extends ArrayAdapter<PostListViewItem> {
 	    holder.time_information.setText(allPostsListViewItems.get(position).getTime());
 	    holder.rating.setRating(allPostsListViewItems.get(position).getRating());;	    
 	    holder.name_surname.setText(allPostsListViewItems.get(position).getNameSurname());	 
-	    
-	    
+	    /*holder.list_view.setOnClickListener(new OnClickListener (){
+
+			@Override
+			public void onClick(View arg0) {
+				// TODO Auto-generated method stub
+				Bundle bundle = new Bundle();
+				//bundle.putInt("post_id", allPostsListViewItems.get(position).getId());
+			}
+	    	
+	    });*/
 	    holder.pos = position;
 	    return convertView;
 	}
@@ -103,7 +153,6 @@ public class PostsListViewAdapter extends ArrayAdapter<PostListViewItem> {
 	    mNotifyOnChange = notifyOnChange;
 	}
 	
-	
 	//---------------static views for each row-----------//
 	static class ViewHolder {
 	
@@ -114,6 +163,11 @@ public class PostsListViewAdapter extends ArrayAdapter<PostListViewItem> {
 		TextView time_information;
 		RatingBar rating;
 		TextView name_surname;
+<<<<<<< Upstream, based on origin/master
+		RelativeLayout post_item_background;
+=======
+		//ListView list_view;
+>>>>>>> 400be6e changes for pulling
 		int pos; //to store the position of the item within the list
 
 	}

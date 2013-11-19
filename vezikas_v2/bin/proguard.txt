@@ -77,12 +77,12 @@
 # view AndroidManifest.xml #generated:29
 -keep class com.justplius.vezikas.facebook.FacebookLogin { <init>(...); }
 
-# onClick res/layout/actionbar.xml #generated:8
+# onClick res/layout/actionbar.xml #generated:9
 -keepclassmembers class * { *** home(...); }
 
-# onClick res/layout/actionbar.xml #generated:37
+# onClick res/layout/actionbar.xml #generated:39
 -keepclassmembers class * { *** main_menu(...); }
 
-# onClick res/layout/actionbar.xml #generated:27
+# onClick res/layout/actionbar.xml #generated:29
 -keepclassmembers class * { *** refresh(...); }
 

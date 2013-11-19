@@ -92,7 +92,7 @@ public class PostsFragment extends SherlockListFragment  {
     	            if (json_data.getInt("ratings_count") > 0){
     	            	//driverPost.setRating(Float.parseFloat("4.76"));//TODO
     	            }
-    	            driverPosts.add(driverPost);    	            
+    	            driverPosts.add(driverPost);   
     	        }
     	        postListAdapter = new PostsListViewAdapter(context, driverPosts);
     	        postsFragment.setListAdapter(postListAdapter);
