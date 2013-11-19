@@ -3,7 +3,6 @@ package com.justplius.vezikas.testlistview;
 import java.text.ParseException;
 import java.util.ArrayList;
 
-import org.apache.http.NameValuePair;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -31,7 +30,6 @@ public class PostsFragment extends SherlockListFragment  {
     private ServerDbQuerry sdq;
     private String result;
     private JSONObject json_data;
-    private ArrayList<NameValuePair> nameValuePairs;
     private Context context;
     private PostsFragment postsFragment = this;
     
