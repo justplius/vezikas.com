@@ -6,7 +6,6 @@ import com.justplius.vezikas.R;
 import com.justplius.vezikas.postdetails.PostDetails;
 
 import android.content.Context;
-<<<<<<< Upstream, based on origin/master
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
@@ -19,10 +18,20 @@ import android.graphics.PorterDuff.Mode;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
 import android.util.Log;
-=======
 import android.content.Intent;
 import android.os.Bundle;
->>>>>>> 400be6e changes for pulling
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.graphics.Canvas;
+import android.graphics.Paint;
+import android.graphics.PorterDuffXfermode;
+import android.graphics.Rect;
+import android.graphics.RectF;
+import android.graphics.Bitmap.Config;
+import android.graphics.PorterDuff.Mode;
+import android.graphics.drawable.BitmapDrawable;
+import android.graphics.drawable.Drawable;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -89,7 +98,6 @@ public class PostsListViewAdapter extends ArrayAdapter<PostListViewItem> {
 	        holder = new ViewHolder();
 	        switch (type) {
 	        case 1:
-<<<<<<< Upstream, based on origin/master
 	        	 convertView = mInflater.inflate(R.layout.passenger_post_item,parent, false);
 		            
 		            holder.post_item_background = (RelativeLayout) convertView.findViewById(R.id.postItemBackground);
@@ -97,15 +105,6 @@ public class PostsListViewAdapter extends ArrayAdapter<PostListViewItem> {
 		            //Drawable d = new BitmapDrawable(context.getResources(),getRoundedCornerBitmap(b)); 
 		            Drawable d = new CurvedAndTiled(b, 15);
 		            holder.post_item_background.setBackgroundDrawable(d);
-		            
-		            holder.route_information = (TextView) convertView.findViewById(R.id.route_information);            
-		            holder.thumbnail = (ImageView) convertView.findViewById(R.id.thumbnail);	            
-		            holder.seats_available = (TextView) convertView.findViewById(R.id.seats_available);	            
-		            holder.date_information = (TextView) convertView.findViewById(R.id.date_information);	            
-		            holder.time_information = (TextView) convertView.findViewById(R.id.time_information);
-		            holder.name_surname = (TextView) convertView.findViewById(R.id.name_surname);
-		            holder.rating = (RatingBar) convertView.findViewById(R.id.rating);
-=======
 	            convertView = mInflater.inflate(R.layout.passenger_post_item,parent, false);
 	            holder.route_information = (TextView) convertView.findViewById(R.id.route_information);            
 	            holder.thumbnail = (ImageView) convertView.findViewById(R.id.thumbnail);	            
@@ -115,7 +114,6 @@ public class PostsListViewAdapter extends ArrayAdapter<PostListViewItem> {
 	            holder.name_surname = (TextView) convertView.findViewById(R.id.name_surname);
 	            holder.rating = (RatingBar) convertView.findViewById(R.id.rating);
 	            //holder.list_view = (ListView) convertView.findViewById(R.id.listView);
->>>>>>> 400be6e changes for pulling
 	            break;
 	        }
 	        convertView.setTag(holder);
@@ -163,11 +161,7 @@ public class PostsListViewAdapter extends ArrayAdapter<PostListViewItem> {
 		TextView time_information;
 		RatingBar rating;
 		TextView name_surname;
-<<<<<<< Upstream, based on origin/master
 		RelativeLayout post_item_background;
-=======
-		//ListView list_view;
->>>>>>> 400be6e changes for pulling
 		int pos; //to store the position of the item within the list
 
 	}
