@@ -2,11 +2,9 @@ package com.justplius.vezikas.testlistview;
  
 import java.text.ParseException;
 import java.util.ArrayList;
-
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
-
 import android.content.Context;
 import android.os.AsyncTask;
 import android.os.Bundle;
@@ -14,7 +12,6 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-
 import com.actionbarsherlock.app.SherlockFragmentActivity;
 import com.actionbarsherlock.app.SherlockListFragment;
 import com.justplius.vezikas.R;
@@ -88,6 +85,7 @@ public class PostsFragment extends SherlockListFragment  {
     	            driverPost.setDate(json_data.getString("leaving_date"));
     	            driverPost.setLeavingTimeFrom(json_data.getString("leaving_time_to"));
     	            driverPost.setLeavingTimeTo(json_data.getString("leaving_time_from"));
+    	            driverPost.setThumbnailInt(json_data.getString("user_id"));
     	            
     	            if (json_data.getInt("ratings_count") > 0){
     	            	//driverPost.setRating(Float.parseFloat("4.76"));//TODO

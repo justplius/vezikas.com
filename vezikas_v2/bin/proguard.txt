@@ -66,6 +66,7 @@
 -keep class com.facebook.widget.LoginButton { <init>(...); }
 
 # view res/layout/menu_items_list.xml #generated:15
+# view res/layout/passenger_post_item.xml #generated:60
 -keep class com.facebook.widget.ProfilePictureView { <init>(...); }
 
 # view res/layout/slidingmenumain.xml #generated:2

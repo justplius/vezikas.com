@@ -24,7 +24,7 @@ public class PostListViewItem {
 	private Time date;
 	private Time leaving_time_from;
 	private Time leaving_time_to;
-	private int thumbnail;
+	private String thumbnail;
 	private String nameSurname;
 				
 	//Constructor
@@ -34,7 +34,6 @@ public class PostListViewItem {
 		leaving_time_to = new Time();		
 		date = new Time();
 		route = new String();
-		thumbnail = R.drawable.ic_driver;
 		nameSurname = new String();
 	}
 		
@@ -62,7 +61,7 @@ public class PostListViewItem {
 	   	seats_available = _seats_available;
 	}
 		
-	public void setThumbnailInt(int _thumbnail){
+	public void setThumbnailInt(String _thumbnail){
 	   	thumbnail = _thumbnail;
 	}
 	
@@ -141,7 +140,7 @@ public class PostListViewItem {
 	   	return String.valueOf(seats_available);
 	}
 		
-	public int getThumbnailInt(){
+	public String getThumbnailInt(){
 	   	return thumbnail;
 	}
 	
