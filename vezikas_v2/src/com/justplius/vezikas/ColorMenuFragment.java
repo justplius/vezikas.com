@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import org.apache.http.NameValuePair;
 import org.apache.http.message.BasicNameValuePair;
 
+import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
@@ -15,6 +16,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -30,7 +32,7 @@ import com.justplius.vezikas.R;
 import com.justplius.vezikas.facebook.FacebookLogin;
 import com.justplius.vezikas.testlistview.PostsFragment;
 
-public class ColorMenuFragment extends ListFragment {
+public class ColorMenuFragment<SampleItem> extends ListFragment {
 
 	private ProfilePictureView profilePictureView;
 	private TextView nameSurname;
@@ -44,10 +46,14 @@ public class ColorMenuFragment extends ListFragment {
 	@Override
 	public void onActivityCreated(Bundle savedInstanceState) {
 		super.onActivityCreated(savedInstanceState);
-		String[] colors = getResources().getStringArray(R.array.color_names);
-		ArrayAdapter<String> colorAdapter = new ArrayAdapter<String>(getActivity(), 
-				android.R.layout.simple_list_item_1, android.R.id.text1, colors);
-		setListAdapter(colorAdapter);
+		SampleAdapter adapter = new SampleAdapter(getActivity());
+		adapter.add(new SampleItem("Sekami marðrutai", R.drawable.icon_route));
+		adapter.add(new SampleItem("Mano grupës", R.drawable.icon_group));
+		adapter.add(new SampleItem("Skelbimai", R.drawable.icon_pin));
+		adapter.add(new SampleItem("Istorija", R.drawable.icon_history));
+		adapter.add(new SampleItem("Nustatymai", R.drawable.icon_settings));
+		adapter.add(new SampleItem("Info", R.drawable.icon_info));
+		setListAdapter(adapter);	
 		SharedPreferences p = PreferenceManager.getDefaultSharedPreferences(this.getActivity());
 		String user_id = p.getString("FB_ID", "");
 		profilePictureView = (ProfilePictureView) this.getActivity().findViewById(R.id.profilePicture);
@@ -108,6 +114,35 @@ public class ColorMenuFragment extends ListFragment {
 			ResponsiveUIActivity ra = (ResponsiveUIActivity) getActivity();
 			ra.switchContent(fragment);
 		}
+	}
+	
+	private class SampleItem {
+		public String tag;
+		public int iconRes;
+		public SampleItem(String tag, int iconRes) {
+			this.tag = tag; 
+			this.iconRes = iconRes;
+		}
+	}
+	
+	public class SampleAdapter extends ArrayAdapter<SampleItem> {
+
+		public SampleAdapter(Context context) {
+			super(context, 0);
+		}
+
+		public View getView(int position, View convertView, ViewGroup parent) {
+			if (convertView == null) {
+				convertView = LayoutInflater.from(getContext()).inflate(R.layout.row, null);
+			}
+			ImageView icon = (ImageView) convertView.findViewById(R.id.row_icon);
+			icon.setImageResource(getItem(position).iconRes);
+			TextView title = (TextView) convertView.findViewById(R.id.row_title);
+			title.setText(getItem(position).tag);
+
+			return convertView;
+		}
+
 	}
 
 

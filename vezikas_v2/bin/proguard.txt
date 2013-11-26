@@ -57,7 +57,7 @@
 # view res/layout/abs__action_bar_tab.xml #generated:3
 -keep class com.actionbarsherlock.internal.widget.ScrollingTabContainerView$TabView { <init>(...); }
 
-# view AndroidManifest.xml #generated:37
+# view AndroidManifest.xml #generated:38
 -keep class com.facebook.LoginActivity { <init>(...); }
 
 # view res/layout/com_facebook_usersettingsfragment.xml #generated:48

@@ -8,6 +8,8 @@ import android.os.AsyncTask;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.util.Log;
+import android.view.Window;
+
 import com.facebook.*;
 import com.facebook.model.GraphUser;
 import com.facebook.widget.*;
@@ -63,6 +65,9 @@ public class FacebookLogin extends Activity {
         
         setContentView(R.layout.facebook_login);
         
+       //Remove title bar
+       // this.requestWindowFeature(Window.FEATURE_NO_TITLE);
+
         loginButton = (LoginButton) findViewById(R.id.login_button);
  
         loginButton.setReadPermissions(Arrays.asList("read_stream", "email", "user_groups"));      

@@ -86,7 +86,7 @@ public class PostsListViewAdapter extends ArrayAdapter<PostListViewItem> {
 		            Bitmap b = BitmapFactory.decodeResource(context.getResources(), R.drawable.pattern_green);         
 		            //Drawable d = new BitmapDrawable(context.getResources(),getRoundedCornerBitmap(b)); 
 		            Drawable d = new CurvedAndTiled(b, 15);
-		            holder.post_item_background.setBackgroundDrawable(d);
+		            holder.post_item_background.setBackground(d);
 		            
 		            holder.route_information = (TextView) convertView.findViewById(R.id.route_information);            
 		            holder.thumbnail = (ImageView) convertView.findViewById(R.id.thumbnail);	            
