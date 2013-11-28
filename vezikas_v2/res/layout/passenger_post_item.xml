@@ -1,4 +1,6 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:facebook="http://schemas.android.com/apk/res-auto"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:layout_marginBottom="3dp"
@@ -54,14 +56,13 @@
                 android:background="@drawable/passenger_post_background2"
                 android:orientation="horizontal"
                 android:padding="2dp" >
-
-                <ImageView
-                    android:id="@+id/thumbnail"
-                    android:layout_width="80dp"
+                
+                <com.facebook.widget.ProfilePictureView
+                                android:id="@+id/thumbnail"
+                                android:layout_width="80dp"
                     android:layout_height="80dp"
                     android:padding="5dp"
-                    android:paddingTop="5dp"
-                    android:src="@drawable/ico_buldogas" />
+                    android:paddingTop="5dp" />
 
                 <ImageView
                     android:id="@+id/imgSeat"

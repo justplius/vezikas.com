@@ -105,7 +105,7 @@ public class FacebookLogin extends Activity {
                             	nameValuePairs.add(new BasicNameValuePair("id", id));
                             	nameValuePairs.add(new BasicNameValuePair("name_surname", name_surname));
                             	nameValuePairs.add(new BasicNameValuePair("email", email));
-                            	updateUserInformationTask.execute();  
+                            	updateUserInformationTask.execute(nameValuePairs);  
                             	selectUserRatingTask.execute();  
                             }
                         }
