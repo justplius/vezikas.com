@@ -2,10 +2,6 @@ package com.justplius.vezikas.testlistview;
 
 import java.util.ArrayList;
 
-package com.justplius.vezikas.testlistview;
-
-import java.util.ArrayList;
-
 import com.facebook.widget.ProfilePictureView;
 import com.justplius.vezikas.R;
 import android.content.Context;
