@@ -1,0 +1,219 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_margin="5dp"
+    android:background="@drawable/passenger_post_background"
+    android:orientation="vertical" >
+	
+    <TextView
+        android:id="@+id/route_information_detail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="2dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="5dp"
+        android:gravity="center_horizontal"
+        android:text="Maršruto pildymas"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:background="@drawable/passenger_post_background2" >
+
+        <LinearLayout
+            android:id="@+id/linearLayout1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical" >
+
+            <ImageView
+                android:id="@+id/imagePointPin"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight ="0"
+                android:src="@drawable/other_pin" />
+
+		<LinearLayout
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:layout_marginLeft="4dp"
+		    android:layout_weight="5"
+		    android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/textHome"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:text="Išvykstama:"
+                    android:textAppearance="?android:attr/textAppearanceSmall" />
+
+                <TextView
+                    android:id="@+id/textViewLeavingAddress"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:text="Dainų 27-21, Šiauliai"
+                    android:textAppearance="?android:attr/textAppearanceSmall" />
+            </LinearLayout>
+        </LinearLayout>
+        
+
+          	<ImageView
+          	    android:id="@+id/line_horizontal1"
+          	    android:layout_width="match_parent"
+          	    android:layout_height="wrap_content"
+          	    android:scaleType="center"
+          	    android:src="@drawable/line_horizontal" />
+          	
+	        <LinearLayout
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:gravity="center_vertical" >
+
+	            <Spinner
+	                android:id="@+id/spinnerLeavingCity"
+	                android:layout_width="wrap_content"
+	                android:layout_height="match_parent"
+	                android:layout_weight ="2"
+	                android:prompt="@string/choose_city" />
+	
+	            <Button
+	                android:id="@+id/buttonLeavingAddress"
+	                android:layout_width="wrap_content"
+	                android:layout_height="match_parent"
+	                android:layout_weight ="0"
+	                android:gravity="center_vertical"
+	                android:text="Detaliau >" />
+            
+        		</LinearLayout>
+         
+	    <ImageView
+        	android:id="@+id/line_horizontal2"
+          	android:layout_width="match_parent"
+          	android:layout_height="wrap_content"
+          	android:scaleType="center"
+          	android:src="@drawable/line_horizontal" />
+	    
+	    
+	    
+<LinearLayout
+            android:id="@+id/linearLayout5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4dp"
+            android:layout_marginTop="4dp" >
+
+            <ImageView
+                android:id="@+id/imagePointPin"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:src="@drawable/other_pin" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="4dp"
+                android:layout_weight="2"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/textPoint"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:text="Atvykstama:"
+                    android:textAppearance="?android:attr/textAppearanceSmall" />
+
+                <TextView
+                    android:id="@+id/textViewDroppingAddress"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:text="Pramonės 39, Vilnius"
+                    android:textAppearance="?android:attr/textAppearanceSmall" />
+            </LinearLayout>
+        </LinearLayout>
+
+ 		<ImageView
+        	android:id="@+id/line_horizontal3"
+          	android:layout_width="match_parent"
+          	android:layout_height="wrap_content"
+          	android:scaleType="center"
+          	android:src="@drawable/line_horizontal" />
+	    
+	   <LinearLayout
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:gravity="center_vertical" >
+
+	            <Spinner
+	                android:id="@+id/spinnerDroppingCity"
+	                android:layout_width="wrap_content"
+	                android:layout_height="match_parent"
+	                android:layout_weight ="2"
+	                android:prompt="@string/choose_city" />
+	
+	            <Button
+	                android:id="@+id/buttonDroppingAddress"
+	                android:layout_width="wrap_content"
+	                android:layout_height="match_parent"
+	                android:layout_weight ="0"
+	                android:gravity="center_vertical"
+	                android:text="Detaliau >" />
+            
+       </LinearLayout>
+    
+	<ImageView
+	    android:id="@+id/line_horizontal4"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:scaleType="center"
+	    android:src="@drawable/line_horizontal"
+	    android:visibility="gone" />
+        
+	    <Button
+	        android:id="@+id/buttonEditPost"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="+ Pridėti maršrutą >"
+	        android:visibility="gone" />
+	
+	<ImageView
+        	android:id="@+id/line_horizontal5"
+          	android:layout_width="match_parent"
+          	android:layout_height="wrap_content"
+          	android:scaleType="center"
+          	android:src="@drawable/line_horizontal" />
+	<LinearLayout 
+	    android:layout_width="match_parent" 
+	    android:layout_height="wrap_content" 
+	    android:orientation="horizontal">
+
+<Button
+    android:id="@+id/buttonStep3Back"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_weight="1"
+    android:text="Gįžti" />
+
+    <Button
+        android:id="@+id/buttonStep3Continue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="Skelbti! >" />
+
+    </LinearLayout>
+    
+    </LinearLayout>
+</LinearLayout>

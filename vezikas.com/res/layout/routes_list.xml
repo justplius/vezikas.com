@@ -1,0 +1,74 @@
+<LinearLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:facebook="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_marginBottom="3dp"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    android:paddingLeft="8dp"
+    android:paddingRight="8dp"
+    android:paddingTop="8dp" >
+
+    <Button
+        android:id="@+id/buttonEditPost"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="+ Pridėti maršrutą" />
+    
+    <ImageView
+          	    android:id="@+id/line_horizontal1"
+          	    android:layout_width="match_parent"
+          	    android:layout_height="wrap_content"
+          	    android:scaleType="center"
+          	    android:src="@drawable/line_horizontal" />
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <Button
+            android:id="@+id/buttonDeletePost"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight ="1"
+            android:text="Vilnius -> Šiauliai" />
+
+        <Button
+            android:id="@+id/button3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight ="0"
+            android:text="x" />
+
+    </LinearLayout>
+
+	<LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <Button
+            android:id="@+id/buttonDeletePost"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight ="1"
+            android:text="Palanga -> Kaunas" />
+
+        <Button
+            android:id="@+id/button3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight ="0"
+            android:text="x" />
+
+    </LinearLayout>
+    
+	<ListView
+        android:divider="@null"
+		android:dividerHeight="0dp"
+        android:id="@android:id/list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+       />
+
+</LinearLayout>

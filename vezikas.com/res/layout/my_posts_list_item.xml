@@ -1,0 +1,170 @@
+<LinearLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:facebook="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_marginBottom="3dp"
+    android:orientation="vertical"
+    android:paddingLeft="8dp"
+    android:paddingRight="8dp"
+    android:paddingTop="8dp" >
+
+        <RelativeLayout
+            android:id="@+id/postItemBackground"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/passenger_post_background"
+            android:paddingBottom="5dp" >
+
+            <ImageView
+                android:id="@+id/imgIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="1dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="3dp"
+                android:gravity="center"
+                android:src="@drawable/bag_icon" />
+
+            <TextView
+                android:id="@+id/route_information"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="2dp"
+                android:layout_toRightOf="@+id/imgIcon"
+                android:gravity="center_horizontal"
+                android:text="Šiauliai->Kaunas->Vilnius"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+            <RelativeLayout
+                android:id="@+id/relativeLayout2"
+                android:layout_width="wrap_content"
+                android:layout_height="80dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/imgIcon"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="2dp"
+                android:background="@drawable/passenger_post_background2"
+                android:orientation="horizontal"
+                android:padding="2dp" >
+                
+                <com.facebook.widget.ProfilePictureView
+                                android:id="@+id/thumbnail"
+                                android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:padding="5dp"
+                    android:paddingTop="5dp" />
+
+                <ImageView
+                    android:id="@+id/imgSeat"
+                    android:layout_width="23dp"
+                    android:layout_height="23dp"
+                    android:layout_alignLeft="@+id/date_information"
+                    android:layout_centerVertical="true"
+                    android:paddingLeft="5dp"
+                    android:src="@drawable/person_icon" />
+
+                <RatingBar
+                    android:id="@+id/rating"
+                    style="?android:attr/ratingBarStyleSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/seats_available"
+                    android:numStars="6"
+                    android:paddingLeft="15dp"
+                    android:stepSize="0.1" />
+                
+                 <ImageView
+                    android:id="@+id/arrow"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:paddingRight="5dp"
+                    android:src="@drawable/arrow_icon" />
+
+                <TextView
+                    android:id="@+id/name_surname"
+                    style="@style/Post.Text"
+                    android:layout_width="200dip"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/thumbnail"
+                    android:layout_alignLeft="@+id/imgSeat"
+                    android:layout_marginBottom="3dp"
+                    android:layout_toLeftOf="@+id/arrow"
+                    android:gravity="center"
+                    android:text="Vycka Buldoginis" />
+
+                <TextView
+                    android:id="@+id/seats_available"
+                    android:layout_width="20dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/imgSeat"
+                    android:gravity="center"
+                    android:paddingLeft="3dp"
+                    android:text="4"
+                    style="@style/Post.Text" />
+
+                <TextView
+                    android:id="@+id/date_information"
+                    style="@style/Post.Text"
+                    android:layout_width="100dip"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginTop="3dp"
+                    android:layout_toRightOf="@+id/thumbnail"
+                    android:gravity="center"
+                    android:text="Spalio 12 d." />
+
+                <TextView
+                    android:id="@+id/time_information"
+                    style="@style/Post.Text"
+                    android:layout_width="110dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginTop="3dp"
+                    android:layout_toRightOf="@+id/date_information"
+                    android:gravity="center"
+                    android:text="16:30-17:30." />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/relativeLayout2"
+                android:layout_alignRight="@+id/relativeLayout2"
+                android:layout_below="@+id/relativeLayout2" >
+
+                <Button
+                    android:id="@+id/buttonEditPost"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawableLeft="@drawable/icon_settings"
+                    android:text="Redaguoti" />
+
+                <Button
+                    android:id="@+id/buttonDeletePost"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawableLeft="@drawable/icon_history"
+                    android:text="Ištrinti" />
+            </LinearLayout>
+
+        </RelativeLayout>
+
+</LinearLayout>

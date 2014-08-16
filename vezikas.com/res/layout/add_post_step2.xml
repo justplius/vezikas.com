@@ -1,0 +1,303 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_margin="5dp"
+    android:background="@drawable/passenger_post_background"
+    android:orientation="vertical" >
+	
+    <TextView
+        android:id="@+id/route_information_detail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="2dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="5dp"
+        android:gravity="center_horizontal"
+        android:text="Informacijos pildymas"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:background="@drawable/passenger_post_background2" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:id="@+id/iconDate"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center"
+                android:layout_weight ="0"
+                android:src="@drawable/bag_icon" />
+
+	            
+	            <TextView
+	                android:id="@+id/textDate"
+	                android:layout_width="wrap_content"
+	                android:layout_height="match_parent"
+	                android:layout_weight="2"
+	                android:gravity="center_vertical|center_horizontal"
+	                android:text="Data: Lapkričio 21d."
+	                android:textAppearance="?android:attr/textAppearanceSmall" />
+	
+	            <Button
+	                android:id="@+id/buttonDate"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:layout_weight="0"
+	                android:gravity="center_vertical"
+	                android:text="Keisti >" />
+            
+        </LinearLayout>
+
+          	<ImageView
+          	    android:id="@+id/line_horizontal1"
+          	    android:layout_width="match_parent"
+          	    android:layout_height="wrap_content"
+          	    android:scaleType="center"
+          	    android:src="@drawable/line_horizontal" />
+
+          	<LinearLayout
+          	    android:layout_width="match_parent"
+          	    android:layout_height="match_parent"
+          	    android:orientation="vertical" >
+
+          		<LinearLayout
+          		    android:layout_width="match_parent"
+          		    android:layout_height="wrap_content"
+          		    android:gravity="center_vertical" >
+
+          		    <ImageView
+          		        android:id="@+id/iconTime"
+          		        android:layout_width="wrap_content"
+          		        android:layout_height="match_parent"
+          		        android:layout_gravity="center_horizontal"
+          		        android:layout_weight="0"
+          		        android:gravity="center"
+          		        android:src="@drawable/bag_icon" />
+
+          		    <TextView
+          		        android:id="@+id/textTime"
+          		        android:layout_width="wrap_content"
+          		        android:layout_height="match_parent"
+          		        android:layout_weight="2"
+          		        android:gravity="center_vertical|center_horizontal"
+          		        android:text="Laikas: 12:30 - 14:30"
+          		        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+          		    <Button
+          		        android:id="@+id/buttonTime"
+          		        android:layout_width="wrap_content"
+          		        android:layout_height="wrap_content"
+          		        android:layout_weight="0"
+          		        android:gravity="center_vertical"
+          		        android:text="Keisti >" />
+          		</LinearLayout>
+
+          		<LinearLayout
+          		    android:layout_width="match_parent"
+          		    android:layout_height="wrap_content" >
+
+          			<CheckBox
+          			    android:id="@+id/checkboxIsFlexible"
+          			    android:layout_width="wrap_content"
+          			    android:layout_height="wrap_content"
+          			    android:checked="true"
+          			    android:text="@string/flexible" />
+
+          			<TextView
+          			    android:id="@+id/leaving_time_flexible_value"
+          			    android:layout_width="wrap_content"
+          			    android:layout_height="wrap_content"
+          			    android:text="@string/time_flexible_value"
+          			    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+          			<SeekBar
+          			    android:id="@+id/leaving_time_seekbar"
+          			    android:layout_width="match_parent"
+          			    android:layout_height="wrap_content"
+          			    android:layout_weight="1"
+          			    android:progress="1" />
+
+          		</LinearLayout>
+
+          	</LinearLayout>
+         
+	    <ImageView
+        	android:id="@+id/line_horizontal2"
+          	android:layout_width="match_parent"
+          	android:layout_height="wrap_content"
+          	android:scaleType="center"
+          	android:src="@drawable/line_horizontal" />
+	    
+	    
+	    
+	        <LinearLayout
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:gravity="center_vertical">
+	
+	            <ImageView
+	                android:id="@+id/iconSeats"
+	                android:layout_width="wrap_content"
+	                android:layout_height="match_parent"
+	                android:layout_gravity="center_horizontal"
+	                android:gravity="center"
+	                android:layout_weight ="0"
+	                android:src="@drawable/bag_icon" />
+	            
+	            <TextView
+	                android:id="@+id/textSeats"
+	                android:layout_width="wrap_content"
+	                android:layout_height="match_parent"
+	                android:layout_weight="2"
+	                android:gravity="center_vertical|center_horizontal"
+	                android:text="Vietos: 4"
+	                android:textAppearance="?android:attr/textAppearanceSmall" />
+	
+	            <Button
+	                android:id="@+id/buttonSeats"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:layout_weight="0"
+	                android:gravity="center_vertical"
+	                android:text="Keisti >" />
+            
+        </LinearLayout>
+
+ 		<ImageView
+        	android:id="@+id/line_horizontal3"
+          	android:layout_width="match_parent"
+          	android:layout_height="wrap_content"
+          	android:scaleType="center"
+          	android:src="@drawable/line_horizontal" />
+	    
+	    <LinearLayout
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:gravity="center_vertical">
+	
+	            <ImageView
+	                android:id="@+id/iconPrice"
+	                android:layout_width="wrap_content"
+	                android:layout_height="match_parent"
+	                android:layout_gravity="center_horizontal"
+	                android:gravity="center"
+	                android:layout_weight ="0"
+	                android:src="@drawable/bag_icon" />
+	            
+	            <TextView
+	                android:id="@+id/textPrice"
+	                android:layout_width="wrap_content"
+	                android:layout_height="match_parent"
+	                android:layout_weight="2"
+	                android:gravity="center_vertical|center_horizontal"
+	                android:text="Kaina: 20 Lt"
+	                android:textAppearance="?android:attr/textAppearanceSmall" />
+	
+	            <Button
+	                android:id="@+id/buttonPrice"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:layout_weight="0"
+	                android:gravity="center_vertical"
+	                android:text="Keisti >" />
+            
+    </LinearLayout>
+    
+	<ImageView
+        	android:id="@+id/line_horizontal4"
+          	android:layout_width="match_parent"
+          	android:layout_height="wrap_content"
+          	android:scaleType="center"
+          	android:src="@drawable/line_horizontal" />
+
+	<LinearLayout
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:gravity="center_vertical" >
+
+	    <ImageView
+	        android:id="@+id/ImageView01"
+	        android:layout_width="wrap_content"
+	        android:layout_height="match_parent"
+	        android:layout_gravity="center_horizontal"
+	        android:layout_weight="0"
+	        android:gravity="center"
+	        android:src="@drawable/bag_icon" />
+
+	    <EditText
+	        android:id="@+id/editTextPhone"
+	        android:layout_width="240dp"
+	        android:layout_height="wrap_content"
+	        android:layout_gravity="right"
+	        android:ems="10"
+	        android:text="86"
+	        android:inputType="phone" />
+
+	</LinearLayout>
+
+	<ImageView
+	    android:id="@+id/ImageView02"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:layout_weight="0"
+	    android:scaleType="center"
+	    android:src="@drawable/line_horizontal" />
+
+	<TextView
+	    android:id="@+id/textComment"
+	    android:layout_width="match_parent"
+	    android:layout_height="match_parent"
+	    android:gravity="center_vertical|center_horizontal"
+	    android:text="Komentaras:"
+	    android:textAppearance="?android:attr/textAppearanceSmall" />
+
+	<EditText
+	    android:id="@+id/message"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:ems="10"
+	    android:inputType="textMultiLine" >
+
+	    <requestFocus />
+	</EditText>
+        
+	<LinearLayout 
+	    android:layout_width="match_parent" 
+	    android:layout_height="wrap_content" 
+	    android:orientation="horizontal">
+
+<Button
+    android:id="@+id/buttonStep2Back"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_weight="1"
+    android:text="Gįžti" />
+
+    <Button
+        android:id="@+id/buttonStep2Continue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="Toliau >" />
+
+    </LinearLayout>
+    
+    </LinearLayout>
+    
+
+</LinearLayout>
+
+    
+

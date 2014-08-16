@@ -1,0 +1,92 @@
+<LinearLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:facebook="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_marginBottom="3dp"
+    android:orientation="vertical"
+    android:paddingLeft="8dp"
+    android:paddingRight="8dp"
+    android:paddingTop="8dp" >
+
+        <RelativeLayout
+            android:id="@+id/addDriverBackground"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/passenger_post_background"
+            android:paddingBottom="5dp" >
+
+            <ImageView
+                android:id="@+id/imgDriver"
+                android:layout_width="wrap_content"
+                android:layout_height="100dp"
+                android:layout_alignParentLeft="true"
+                android:layout_gravity="center_horizontal"
+                android:layout_toLeftOf="@+id/arrow"
+                android:gravity="center"
+                android:src="@drawable/car_icon" />
+                
+                 <ImageView
+                     android:id="@+id/arrow"
+                     android:layout_width="25dp"
+                     android:layout_height="25dp"
+                     android:layout_alignBottom="@+id/textPassenger"
+                     android:layout_alignParentRight="true"
+                     android:layout_alignParentTop="true"
+                     android:paddingRight="5dp"
+                     android:src="@drawable/arrow_icon" />
+
+                 <TextView
+                     android:id="@+id/textPassenger"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:layout_alignParentLeft="true"
+                     android:layout_below="@+id/imgDriver"
+                     android:layout_toLeftOf="@+id/arrow"
+                     android:gravity="center_horizontal"
+                     android:text="Vežėjas"
+                     android:textAppearance="?android:attr/textAppearanceMedium" />
+               
+        </RelativeLayout>
+        
+        <RelativeLayout
+            android:id="@+id/addPassengerBackground"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/passenger_post_background"
+            android:paddingBottom="5dp" >
+
+            <ImageView
+                android:id="@+id/imgPassenger"
+                android:layout_width="wrap_content"
+                android:layout_height="100dp"
+                android:layout_alignParentLeft="true"
+                android:layout_gravity="center_horizontal"
+                android:layout_toLeftOf="@+id/arrow"
+                android:gravity="center"
+                android:src="@drawable/bag_icon" />
+                
+                 <ImageView
+                     android:id="@+id/arrow"
+                     android:layout_width="25dp"
+                     android:layout_height="25dp"
+                     android:layout_alignBottom="@+id/textPassenger"
+                     android:layout_alignParentRight="true"
+                     android:layout_alignParentTop="true"
+                     android:paddingRight="5dp"
+                     android:src="@drawable/arrow_icon" />
+
+                 <TextView
+                     android:id="@+id/textPassenger"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:layout_alignParentLeft="true"
+                     android:layout_below="@+id/imgPassenger"
+                     android:layout_toLeftOf="@+id/arrow"
+                     android:gravity="center_horizontal"
+                     android:text="Keleivis"
+                     android:textAppearance="?android:attr/textAppearanceMedium" />
+               
+        </RelativeLayout>
+
+</LinearLayout>
